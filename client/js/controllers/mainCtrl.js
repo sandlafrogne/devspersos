@@ -15,10 +15,26 @@ angular.module('controllers', [])
         function ($scope) {
             $scope.view = false;
         }])
-    .controller('newUserCtrl', ['$scope',
-        function ($scope) {
-            $scope.view = false;
-        }])
+    .controller('newUserCtrl', ['$scope','$http','$location',function ($scope,$http,$location) {
+        $scope.saveUser = function (name,mail, password) {
+            $http({method: 'POST', url: '/addvNumber', data: {name:name,email: mail, password: password}}).
+                success(function (data, status, headers, config) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                    $('#info .modal-body').html('Bienvenue')
+                    $('#info').modal("show")
+                    $location.path('/home');
+                }).
+                error(function (data, status, headers, config) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                    $('#error').modal - body.html(error.data.message)
+                    $('#error').modal("show");
+                    //redirection sur la page d'accueil
+                    $location.path('/login');
+                });
+        }
+    }])
     .controller('razCtrl', ['$scope',
         function ($scope) {
             $scope.view = false;

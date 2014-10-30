@@ -148,6 +148,7 @@
 <script type="text/ng-template" id="newuser.html">
     <div ng-controller="newUserCtrl">
         Formulaire pour enregistrer un nouvel user et lui attribuer un vnumber
+        <button data-ng-click="saveUser('toto','toto@toto.fr','titi')">Enregistre</button>
     </div>
 </script>
 
@@ -188,9 +189,7 @@
 <!--multilangue, pascalprecht-->
 <script src="vendors/angular-translate.min.js"></script>
 
-<!--<script src="js/filters/ExampleFilter.js"></script>
-<script src="js/services/sharedProperties.js"></script>-->
-<script src="js/services/apiServices.js"></script>
+
 <script src="js/controllers/mainCtrl.js"></script>
 
 
