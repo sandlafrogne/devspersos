@@ -1,25 +1,26 @@
-//TODO : changer le nom du module, même valeur que dans index.html
-angular.module('plunker', ['ngRoute', 'controllers', 'services', 'directives', 'filters', 'pascalprecht.translate','ngAnimate'])
+angular.module('vNumber', ['ngRoute',  'controllers', 'services', 'directives', 'filters','pascalprecht.translate'])
     .config(function ($routeProvider,$httpProvider) {
-        $routeProvider.when('/', {templateUrl: 'albums.html'})
-            .when('/pane', {templateUrl: 'pane.html'})
-            .when('/album/:id', {templateUrl: 'album.html'})
-            .when('/as', {templateUrl: 'as.html'})
-            .when('/albums', {templateUrl: 'albums.html'})
+        $routeProvider
+            .when('/', {templateUrl: 'login.html'})
+            .when('/login', {templateUrl: 'login.html'})
+            .when('/home', {templateUrl: 'home.html'})
+            .when('/allnumbers', {templateUrl: 'allnumbers.html'})
+            .when('/poolnumbers', {templateUrl: 'poolnumbers.html'})
+            .when('/newuser', {templateUrl: 'newuser.html'})
+            .when('/raz', {templateUrl: 'raz.html'})
             .when('/error', {templateUrl: 'error.html'})
+            .when('/logout', {templateUrl: 'logout.html'})
             .otherwise({
                 redirectTo: '/error'
             });
         //l'interceptor permet de mettre le nom de domaine devant l'url relative (accès à un serveur sur un autre domaine)
-        $httpProvider.interceptors.push(function ($q, $window, $location, sharedProperties) {
+        $httpProvider.interceptors.push(function ($q, $window, $location) {
             return {
                 request: function (config) {
-                  /*  patt = new RegExp('out_rpc');
-                    patt2 = new RegExp('http://');
-                    if (patt.test(config.url) && !patt2.test(config.url)) {
-                        config.url = sharedProperties.getOutRPCUrl() + "/" + config.url;
-                    }
-                    config.headers = config.headers || {};
+
+
+
+             /*       config.headers = config.headers || {};
                     if ($window.sessionStorage.ext_accessToken) {
                         config.headers.Authorization = 'Bearer ' + $window.sessionStorage.ext_accessToken;
                     } else if ($window.localStorage.ext_accessToken) {
@@ -42,7 +43,7 @@ angular.module('plunker', ['ngRoute', 'controllers', 'services', 'directives', '
             'MY_ACCOUNT': 'My account',
             'LOG_OUT': 'Log out',
             'SEARCH': 'Search',
-            'ERROR': 'Error',
+            'ERROR': 'Error, page not found',
             'AN_ERROR_HAS_OCCURRED': 'An error has occurred',
             'PANE': 'Panes',
             'HOME': 'home',
@@ -52,7 +53,7 @@ angular.module('plunker', ['ngRoute', 'controllers', 'services', 'directives', '
             'MY_ACCOUNT': 'Mon compte',
             'LOG_OUT': 'Se déconnecter',
             'SEARCH': 'Rechercher',
-            'ERROR': 'Erreur',
+            'ERROR': 'Erreur, la page n\'existe pas',
             'AN_ERROR_HAS_OCCURRED': 'Une erreur s\'est produite',
             'PANE': 'Onglets',
             'HOME': 'accueil',
@@ -60,6 +61,8 @@ angular.module('plunker', ['ngRoute', 'controllers', 'services', 'directives', '
         });
         $translateProvider.preferredLanguage('fr');
     }])
+
+
 
 
 /*Ajout des modules externes*/

@@ -1,7 +1,7 @@
 /**
  * Created by tnvl6480 on 18/09/2014.
  */
-angular.module('controllers')
+angular.module('controllers', [])
     .controller('SettingsController1', SettingsController1);
 
 function SettingsController1() {

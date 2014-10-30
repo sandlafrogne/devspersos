@@ -1,7 +1,7 @@
 /**
  * Created by tnvl6480 on 18/09/2014.
  */
-angular.module('controllers')
+angular.module('controllers', [])
     .controller('navController', ['$scope','$window','$location','sharedProperties',function ($scope,$window,$location,sharedProperties) {
 
         $scope.$back = function(){

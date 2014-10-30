@@ -1,4 +1,4 @@
-# nodejsbasic
+# vNumber
 ===========
 
 Projet vierge pour nodeJS
@@ -6,7 +6,7 @@ Projet vierge pour nodeJS
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
 ## Source de ce projet
-https://github.com/sandlafrogne/nodejsbasic.git
+
 
 ##Git Projet avec Source tree
 
@@ -19,13 +19,7 @@ Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https
 * npm install
 * node index.js
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-* cd yourDirectory
-* heroku create
-* git push heroku master
-* heroku open
+Your app should now be running on [localhost:80](http://localhost:80/).
 
 
 ## Best practices
@@ -38,7 +32,7 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 	* Utilisation : dans le code html insérer : **{{'nameKey' | translate}}**
 * Interceptor : dans app.js, permet de rajouter un nom de serveur devant l'url relative afin de faire des appels API en relatif dans services et de compléter le nom du serveur distant à un seul endroit. 
 * appel html d'une page : localhost:5000/#/keyword
-* les animations des albums sont faites avec GreenSock. Il y a une partie .animation après le contrôleur.
+
 * Relancer automatiquement le serveur en cas de modification de code : 
 	* npm install -g nodemon
 	* lancement du serveur  : ***nodemon -e js,html, css index.js***
@@ -47,8 +41,7 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 * [Angular](https://docs.angularjs.org/guide/)
 * [Bootstrap](http://getbootstrap.com/javascript/) 
 * [Présentations graphiques](http://blog.angularjs.org/)
-* [Plunker, environnement de test](http://plnkr.co/)
+* [plunker, environnement de test](http://plnkr.co/)
 * [JsFiddle, environnement de test](http://jsfiddle.net/)
-* [Deezer API](http://developers.deezer.com/api/)
-* [GreenSock, animation graphique des pochettes](http://greensock.com/get-started-js)
+
 
